@@ -7,7 +7,7 @@ After=lvm2-monitor.service
 Type=simple
 Restart=on-failure
 RestartForceExitStatus=SIGPIPE
-ExecStartPre=/bin/mkdir -p /run/topolvm 
+RuntimeDirectory=topolvm
 ExecStart=/opt/sbin/lvmd
 
 [Install]
